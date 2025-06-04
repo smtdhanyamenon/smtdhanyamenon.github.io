@@ -4,15 +4,11 @@ I am a Scholar specializing in Business Economics and Data Science, dedicated to
 
 ## Working Papers
 
-*Measuring Market Power in Banking: A Stochastic Framework for Competitive Analysis*
-
-*
+*Autonomous Electric Aircrafts and Green Airspaces: Predicting the Timeline of Innovation and Sustainable Development*
 
 *International Taxation: Optimising Policies Using Machine Learning*
 
-*
-
-*
+*Measuring Market Power in Banking: A Stochastic Framework for Competitive Analysis*
 
 ## Book Projects
 
