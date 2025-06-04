@@ -8,7 +8,7 @@ I am a Scholar specializing in Business Economics and Data Science, dedicated to
 
 *
 
-*
+*International Taxation: Optimising Policies Using Machine Learning*
 
 *
 
