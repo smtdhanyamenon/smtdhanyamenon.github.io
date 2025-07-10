@@ -1,6 +1,6 @@
 ## Introduction
 
-I am a Scholar specializing in Business Economics and Data Science, dedicated to conducting research, shaping strategic insights and advancing thought leadership in my field. My expertise spans central banking, taxation and public finance, international trade, competitiveness and climate and development economics, with a focus on harnessing econometrics, management science and machine learning to analyze high-frequency, large-scale datasets. Through a data-driven approach to financial foresights, my work is driven by a commitment to rigorous analysis, clear communication and impactful intellectual contribution—bridging technical expertise with practical application to address complex administrative challenges.
+I am a Scholar specializing in Economics and Data Science, dedicated to conducting research, shaping policy insights and advancing thought leadership in my field. My expertise spans central banking, taxation and public finance, international business and trade, commodity markets, competitiveness and climate and development, with a focus on harnessing econometrics, management analytics and machine learning to extract patterns and drive further theoretical knowledge creation. Through a information-driven approach to financial foresights for strategic decision making, my work is driven by a commitment to meticulous analysis, clear communication and impactful intellectual contribution—bridging technical know-how with practical application to address complex administrative challenges.
 
 ## Working Papers
 
