@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name - Personal Website</title>
+    <title>Smt. [Dhanya Menon] - Economics & Data Science Scholar</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -11,433 +12,473 @@
             box-sizing: border-box;
         }
 
+        :root {
+            --primary-color: #1a1a1a;
+            --secondary-color: #2d2d2d;
+            --accent-color: #4a4a4a;
+            --text-primary: #1a1a1a;
+            --text-secondary: #4a4a4a;
+            --bg-light: #f5f5f5;
+            --bg-white: #ffffff;
+            --border-light: #e5e5e5;
+        }
+
         body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            font-family: 'Georgia', serif;
             line-height: 1.6;
-            color: #333;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
+            color: var(--text-primary);
+            background-color: var(--bg-light);
         }
 
         .container {
-            max-width: 1200px;
+            max-width: 1000px;
             margin: 0 auto;
-            padding: 20px;
+            padding: 0 20px;
         }
 
-        header {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            border-radius: 20px;
-            padding: 30px;
-            margin-bottom: 30px;
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: white;
+            padding: 60px 0;
             text-align: center;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
         }
 
-        .profile-img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
-            margin: 0 auto 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 60px;
-            color: white;
-            font-weight: bold;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-            transition: transform 0.3s ease;
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" fill="white" opacity="0.03"><path d="M0,50 C250,25 750,75 1000,50 L1000,100 L0,100 Z"/></svg>') repeat-x;
         }
 
-        .profile-img:hover {
-            transform: translateY(-5px);
+        .header-content {
+            position: relative;
+            z-index: 1;
         }
 
-        h1 {
-            color: white;
-            font-size: 2.5em;
-            margin-bottom: 10px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        .header h1 {
+            font-size: 3.5rem;
+            font-weight: 300;
+            margin-bottom: 0.5rem;
+            letter-spacing: -1px;
         }
 
-        .tagline {
-            color: rgba(255, 255, 255, 0.9);
-            font-size: 1.2em;
-            margin-bottom: 20px;
+        .header .title {
+            font-size: 1.4rem;
+            color: #d1d1d1;
+            font-weight: 400;
+            margin-bottom: 2rem;
         }
 
-        .social-links {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            margin-top: 20px;
-        }
-
-        .social-btn {
-            background: rgba(255, 255, 255, 0.2);
-            color: white;
-            padding: 10px 20px;
-            border-radius: 50px;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            border: 1px solid rgba(255, 255, 255, 0.3);
-        }
-
-        .social-btn:hover {
-            background: rgba(255, 255, 255, 0.3);
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-        }
-
-        .main-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-
-        .card {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            border-radius: 20px;
-            padding: 30px;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
-        }
-
-        .card:hover {
-            transform: translateY(-5px);
-        }
-
-        .card h2 {
-            color: white;
-            margin-bottom: 20px;
-            font-size: 1.8em;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .card-icon {
-            width: 40px;
-            height: 40px;
-            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 20px;
-        }
-
-        .card p, .card li {
-            color: rgba(255, 255, 255, 0.9);
-            margin-bottom: 15px;
-            line-height: 1.7;
-        }
-
-        .skill-tags {
+        .expertise-tags {
             display: flex;
             flex-wrap: wrap;
-            gap: 10px;
-            margin-top: 15px;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 2rem;
         }
 
-        .skill-tag {
-            background: rgba(255, 255, 255, 0.2);
-            color: white;
-            padding: 5px 15px;
-            border-radius: 20px;
-            font-size: 0.9em;
-            border: 1px solid rgba(255, 255, 255, 0.3);
-        }
-
-        .project-item {
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 15px;
-            padding: 20px;
-            margin-bottom: 15px;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            transition: all 0.3s ease;
-        }
-
-        .project-item:hover {
+        .social-link {
             background: rgba(255, 255, 255, 0.15);
-        }
-
-        .project-title {
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 12px 20px;
+            border-radius: 50px;
             color: white;
-            font-weight: bold;
-            margin-bottom: 10px;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
         }
 
-        .contact-form {
+        .social-link:hover {
+            background: rgba(255, 255, 255, 0.25);
+            transform: translateY(-3px);
+            color: white;
+        }
+
+        .social-link i {
+            font-size: 1.2rem;
+        }
+
+        /* Navigation */
+        .nav {
+            background: var(--bg-white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-content {
             display: flex;
-            flex-direction: column;
+            justify-content: center;
+            padding: 0;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-links li a {
+            display: block;
+            padding: 20px 30px;
+            text-decoration: none;
+            color: var(--text-primary);
+            font-weight: 500;
+            transition: all 0.3s ease;
+            border-bottom: 3px solid transparent;
+        }
+
+        .nav-links li a:hover {
+            color: var(--accent-color);
+            border-bottom-color: var(--accent-color);
+        }
+
+        /* Main Content */
+        .main {
+            padding: 60px 0;
+        }
+
+        .section {
+            background: var(--bg-white);
+            margin-bottom: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+        }
+
+        .section-header {
+            background: linear-gradient(135deg, var(--accent-color), var(--secondary-color));
+            color: white;
+            padding: 25px 40px;
+            position: relative;
+        }
+
+        .section-header::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 100%;
+            height: 10px;
+            background: linear-gradient(135deg, var(--accent-color), var(--secondary-color));
+            clip-path: polygon(0 0, 100% 0, 95% 100%, 5% 100%);
+        }
+
+        .section-header h2 {
+            font-size: 2rem;
+            font-weight: 400;
+            display: flex;
+            align-items: center;
             gap: 15px;
         }
 
-        .form-group {
-            display: flex;
-            flex-direction: column;
+        .section-content {
+            padding: 40px;
         }
 
-        .form-group label {
-            color: white;
-            margin-bottom: 5px;
-            font-weight: 500;
+        /* About Section */
+        .about-text {
+            font-size: 1.15rem;
+            line-height: 1.8;
+            text-align: justify;
+            color: var(--text-secondary);
         }
 
-        .form-group input,
-        .form-group textarea {
-            background: rgba(255, 255, 255, 0.1);
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            border-radius: 10px;
-            padding: 12px;
-            color: white;
-            font-size: 16px;
-        }
-
-        .form-group input::placeholder,
-        .form-group textarea::placeholder {
-            color: rgba(255, 255, 255, 0.7);
-        }
-
-        .submit-btn {
-            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
-            color: white;
-            border: none;
-            padding: 15px 30px;
-            border-radius: 50px;
-            font-size: 16px;
-            font-weight: bold;
-            cursor: pointer;
+        /* Research Sections */
+        .research-item {
+            background: var(--bg-light);
+            border-left: 4px solid var(--accent-color);
+            padding: 25px;
+            margin-bottom: 25px;
+            border-radius: 0 8px 8px 0;
             transition: all 0.3s ease;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
         }
 
-        .submit-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+        .research-item:hover {
+            background: #f8f8f8;
+            border-left-width: 8px;
+            transform: translateX(5px);
         }
 
-        footer {
+        .research-item h3 {
+            color: var(--primary-color);
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+            font-style: italic;
+        }
+
+        .research-item .type {
+            color: var(--accent-color);
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--primary-color);
+            color: white;
             text-align: center;
-            margin-top: 50px;
-            padding: 30px;
-            color: rgba(255, 255, 255, 0.8);
+            padding: 40px 0;
+            margin-top: 60px;
         }
 
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-bottom: 20px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            opacity: 0.9;
+            transition: opacity 0.3s ease;
+        }
+
+        .contact-item:hover {
+            opacity: 1;
+        }
+
+        /* Responsive Design */
         @media (max-width: 768px) {
-            .container {
-                padding: 15px;
+            .header h1 {
+                font-size: 2.5rem;
             }
-            
-            h1 {
-                font-size: 2em;
-            }
-            
-            .social-links {
+
+            .nav-links {
                 flex-direction: column;
                 align-items: center;
             }
-            
-            .main-content {
-                grid-template-columns: 1fr;
+
+            .nav-links li a {
+                padding: 15px 20px;
+            }
+
+            .section-content {
+                padding: 25px;
+            }
+
+            .contact-info {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .expertise-tags {
+                gap: 8px;
+            }
+
+            .social-link {
+                font-size: 0.9rem;
+                padding: 10px 16px;
+            }
+
+            .expertise-tags {
+                gap: 15px;
             }
         }
 
-        .floating-elements {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            z-index: -1;
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
-        .floating-circle {
-            position: absolute;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 50%;
-            animation: float 6s ease-in-out infinite;
+        .section {
+            animation: fadeInUp 0.6s ease forwards;
         }
 
-        @keyframes float {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-20px); }
-        }
+        .section:nth-child(1) { animation-delay: 0.1s; }
+        .section:nth-child(2) { animation-delay: 0.2s; }
+        .section:nth-child(3) { animation-delay: 0.3s; }
     </style>
 </head>
 <body>
-    <div class="floating-elements">
-        <div class="floating-circle" style="width: 60px; height: 60px; top: 10%; left: 10%; animation-delay: 0s;"></div>
-        <div class="floating-circle" style="width: 80px; height: 80px; top: 20%; right: 10%; animation-delay: 2s;"></div>
-        <div class="floating-circle" style="width: 40px; height: 40px; bottom: 20%; left: 15%; animation-delay: 4s;"></div>
-        <div class="floating-circle" style="width: 70px; height: 70px; bottom: 10%; right: 20%; animation-delay: 1s;"></div>
-    </div>
-
-    <div class="container">
-        <header>
-            <div class="profile-img">YN</div>
-            <h1>Your Name</h1>
-            <p class="tagline">Full Stack Developer & Creative Problem Solver</p>
-            
-            <div class="social-links">
-                <a href="https://linkedin.com/in/smtdhanyamenon" class="social-btn">LinkedIn</a>
-                <a href="https://github.com/smtdhanyamenon" class="social-btn">GitHub</a>
-                <a href="https://twitter.com/smtdhanyamenon" class="social-btn">Twitter</a>
-                <a href="mailto:smtdhanyamenon@gmail.com" class="social-btn">Email</a>
-            </div>
-        </header>
-
-        <div class="main-content">
-            <div class="card">
-                <h2>
-                    <div class="card-icon">👋</div>
-                    About Me
-                </h2>
-                <p>Welcome to my digital space! I'm a passionate developer with a love for creating innovative solutions and beautiful user experiences. With a background in computer science and years of hands-on experience, I enjoy tackling complex challenges and turning ideas into reality.</p>
-                <p>When I'm not coding, you'll find me exploring new technologies, contributing to open source projects, or enjoying the great outdoors. I believe in continuous learning and always strive to stay at the forefront of technological advancement.</p>
-            </div>
-
-            <div class="card">
-                <h2>
-                    <div class="card-icon">🚀</div>
-                    Skills
-                </h2>
-                <p>I specialize in modern web technologies and have experience across the full development stack:</p>
-                <div class="skill-tags">
-                    <span class="skill-tag">JavaScript</span>
-                    <span class="skill-tag">React</span>
-                    <span class="skill-tag">Node.js</span>
-                    <span class="skill-tag">Python</span>
-                    <span class="skill-tag">HTML/CSS</span>
-                    <span class="skill-tag">MongoDB</span>
-                    <span class="skill-tag">Git</span>
-                    <span class="skill-tag">AWS</span>
-                    <span class="skill-tag">Docker</span>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <h1>Smt. [Dhanya Menon]</h1>
+                <p class="title">Scholar in Economics & Data Science</p>
+                <div class="expertise-tags">
+                    <a href="https://linkedin.com/in/smtdhanyamenon" class="social-link" target="_blank">
+                        <i class="fab fa-linkedin"></i> LinkedIn
+                    </a>
+                    <a href="https://x.com/smtdhanyamenon" class="social-link" target="_blank">
+                        <i class="fab fa-x-twitter"></i> X
+                    </a>
+                    <a href="https://facebook.com/smtdhanyamenon" class="social-link" target="_blank">
+                        <i class="fab fa-facebook"></i> Facebook
+                    </a>
+                    <a href="https://instagram.com/smtdhanyamenon" class="social-link" target="_blank">
+                        <i class="fab fa-instagram"></i> Instagram
+                    </a>
+                    <a href="https://mintstreetobserver.blogspot.com" class="social-link" target="_blank">
+                        <i class="fab fa-blogger"></i> Blog
+                    </a>
                 </div>
-            </div>
-
-            <div class="card">
-                <h2>
-                    <div class="card-icon">💼</div>
-                    Experience
-                </h2>
-                <div class="project-item">
-                    <div class="project-title">Senior Developer at Tech Company</div>
-                    <p>Led development of scalable web applications serving 10k+ users. Implemented modern CI/CD practices and mentored junior developers.</p>
-                </div>
-                <div class="project-item">
-                    <div class="project-title">Freelance Web Developer</div>
-                    <p>Created custom websites and applications for various clients, focusing on performance, accessibility, and user experience.</p>
-                </div>
-            </div>
-
-            <div class="card">
-                <h2>
-                    <div class="card-icon">🎨</div>
-                    Projects
-                </h2>
-                <div class="project-item">
-                    <div class="project-title">E-Commerce Platform</div>
-                    <p>Full-stack application built with React and Node.js, featuring real-time inventory management and payment processing.</p>
-                </div>
-                <div class="project-item">
-                    <div class="project-title">Weather Dashboard</div>
-                    <p>Interactive weather application using modern APIs, featuring location-based forecasts and beautiful data visualizations.</p>
-                </div>
-                <div class="project-item">
-                    <div class="project-title">Open Source Library</div>
-                    <p>JavaScript utility library with 1k+ GitHub stars, helping developers streamline common tasks and improve productivity.</p>
-                </div>
-            </div>
-
-            <div class="card">
-                <h2>
-                    <div class="card-icon">📧</div>
-                    Get In Touch
-                </h2>
-                <p>I'm always interested in new opportunities and collaborations. Feel free to reach out!</p>
-                <form class="contact-form" onsubmit="handleSubmit(event)">
-                    <div class="form-group">
-                        <label for="name">Name</label>
-                        <input type="text" id="name" name="name" placeholder="Dhanya Menon" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" placeholder="smtdhanyamenon@gmail.com" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea id="message" name="message" rows="4" placeholder="Your message..." required></textarea>
-                    </div>
-                    <button type="submit" class="submit-btn">Send Message</button>
-                </form>
             </div>
         </div>
+    </header>
 
-        <footer>
-            <p>&copy; 2025 Dhanya Menon. Made with ❤️ and lots of coffee.</p>
-        </footer>
-    </div>
+    <nav class="nav">
+        <div class="container">
+            <div class="nav-content">
+                <ul class="nav-links">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#research">Research</a></li>
+                    <li><a href="#publications">Publications</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="main">
+        <div class="container">
+            <section id="about" class="section">
+                <div class="section-header">
+                    <h2><i class="fas fa-user-graduate"></i> About</h2>
+                </div>
+                <div class="section-content">
+                    <p class="about-text">
+                        I am a Scholar specializing in Economics and Data Science, dedicated to conducting research, shaping policy insights, and advancing thought leadership in my field. My expertise spans central banking, investments and wealth, taxation and public finance, industry, competition and trade, climate and development, and international business and finance—with a focus on harnessing econometrics, management analytics, and machine learning to extract patterns and drive theoretical knowledge creation. Through an information-driven approach to foresight for strategic decision-making, my work reflects a commitment to meticulous analysis, clear communication, and impactful intellectual contribution—bridging technical know-how with practical application to address complex administrative challenges.
+                    </p>
+                </div>
+            </section>
+
+            <section id="research" class="section">
+                <div class="section-header">
+                    <h2><i class="fas fa-microscope"></i> Working Papers</h2>
+                </div>
+                <div class="section-content">
+                    <div class="research-item">
+                        <div class="type">Working Paper</div>
+                        <h3>Autonomous Electric Aircrafts and Green Airspaces: Predicting the Timeline of Innovation and Sustainable Development</h3>
+                    </div>
+                    <div class="research-item">
+                        <div class="type">Working Paper</div>
+                        <h3>International Taxation: Optimising Policies Using Machine Learning</h3>
+                    </div>
+                    <div class="research-item">
+                        <div class="type">Working Paper</div>
+                        <h3>Measuring Market Power in Banking: A Stochastic Framework for Competitive Analysis</h3>
+                    </div>
+                </div>
+            </section>
+
+            <section id="publications" class="section">
+                <div class="section-header">
+                    <h2><i class="fas fa-book"></i> Book Projects</h2>
+                </div>
+                <div class="section-content">
+                    <div class="research-item">
+                        <div class="type">Forthcoming Book</div>
+                        <h3>One World, One Market: The Ground Reality of Globalisation</h3>
+                    </div>
+                    <div class="research-item">
+                        <div class="type">Forthcoming Book</div>
+                        <h3>Reforms that Benefit: Strategic Public Finance for Sustainable Economic Growth</h3>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer id="contact" class="footer">
+        <div class="container">
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>smtdhanyamenon@gmail.com</span>
+                </div>
+            </div>
+            <p>&copy; 2025 Smt. [Dhanya Menon]. All rights reserved.</p>
+        </div>
+    </footer>
 
     <script>
-        function handleSubmit(event) {
-            event.preventDefault();
-            const formData = new FormData(event.target);
-            const name = formData.get('name');
-            const email = formData.get('email');
-            const message = formData.get('message');
-            
-            // In a real application, you would send this data to a server
-            alert(`Thanks for your message, ${name}! I'll get back to you soon.`);
-            event.target.reset();
-        }
-
-        // Add smooth scrolling to social links
+        // Smooth scrolling for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
             });
         });
 
-        // Add parallax effect to floating elements
+        // Add active state to navigation based on scroll position
         window.addEventListener('scroll', () => {
-            const scrolled = window.pageYOffset;
-            const parallax = document.querySelectorAll('.floating-circle');
-            const speed = 0.5;
+            const sections = document.querySelectorAll('section[id]');
+            const navLinks = document.querySelectorAll('.nav-links a');
+            
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 100;
+                if (scrollY >= sectionTop) {
+                    current = section.getAttribute('id');
+                }
+            });
 
-            parallax.forEach((element, index) => {
-                const yPos = -(scrolled * speed * (index + 1) * 0.1);
-                element.style.transform = `translateY(${yPos}px)`;
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').substring(1) === current) {
+                    link.classList.add('active');
+                }
             });
         });
 
-        // Add typing effect to tagline
-        const tagline = document.querySelector('.tagline');
-        const originalText = tagline.textContent;
-        let i = 0;
-        
-        function typeWriter() {
-            if (i < originalText.length) {
-                tagline.textContent = originalText.substring(0, i + 1);
-                i++;
-                setTimeout(typeWriter, 50);
-            }
-        }
+        // Add entrance animations on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
 
-        // Start typing effect after page loads
-        window.addEventListener('load', () => {
-            tagline.textContent = '';
-            setTimeout(typeWriter, 1000);
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.research-item').forEach(item => {
+            item.style.opacity = '0';
+            item.style.transform = 'translateY(30px)';
+            item.style.transition = 'all 0.6s ease';
+            observer.observe(item);
         });
     </script>
 </body>
