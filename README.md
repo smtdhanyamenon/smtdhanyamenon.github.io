@@ -2,11 +2,11 @@
 
 A modern, responsive personal academic website showcasing research, publications, and professional presence in field of choice.
 
-## ðŸŽ¯ Overview
+## 🎯 Overview
 
 This website serves as a professional academic portfolio, featuring a clean and sophisticated design optimized for scholars, experts, researchers, and academics. Built with modern web technologies and designed with academic aesthetics in mind.
 
-## âœ¨ Features
+## ✨ Features
 
 - **Responsive Design**: Optimized for desktop, tablet, and mobile viewing
 - **Modern Aesthetics**: Professional black and gray color scheme with subtle animations
@@ -15,15 +15,15 @@ This website serves as a professional academic portfolio, featuring a clean and 
 - **Performance Optimized**: Fast loading with smooth scrolling and hover effects
 - **Professional Typography**: Clean, readable fonts suitable for academic content
 
-## ðŸ—ï¸ Structure
+## 🏗️ Structure
 
 ```
-â”œâ”€â”€ index.html          # Main website file
-â”œâ”€â”€ profile.jpg         # Profile picture (add your own)
-â””â”€â”€ README.md          # This file
+├── index.html          # Main website file
+├── profile.jpg         # Profile picture (add your own)
+└── README.md          # This file
 ```
 
-## ðŸ“± Sections
+## 📱 Sections
 
 ### Header
 - Professional profile picture
@@ -54,7 +54,7 @@ This website serves as a professional academic portfolio, featuring a clean and 
 - Social media links (LinkedIn, X, Facebook, Instagram, Blog)
 - Professional networking integration
 
-## ðŸš€ Getting Started
+## 🚀 Getting Started
 
 ### 1. Clone the Repository
 ```bash
@@ -85,7 +85,7 @@ You can deploy this website using:
 - **Vercel**: Deploy directly from GitHub
 - **Any web hosting service**: Upload the files
 
-## ðŸŽ¨ Customization
+## 🎨 Customization
 
 ### Color Scheme
 The website uses a professional black and gray palette defined in CSS custom properties:
@@ -106,7 +106,7 @@ Uses Georgia serif font for academic readability and professional appearance.
 - Card-based content sections
 - Smooth animations and transitions
 
-## ðŸ“ Content Guidelines
+## 📝 Content Guidelines
 
 ### Research Papers
 - Use descriptive, academic titles
@@ -127,7 +127,7 @@ Update the footer links with your actual profiles:
 - Instagram: Personal/professional content
 - Blog: Academic writing and thoughts
 
-## ðŸŒ Browser Support
+## 🌐 Browser Support
 
 - Chrome/Chromium (recommended)
 - Firefox
@@ -135,11 +135,11 @@ Update the footer links with your actual profiles:
 - Edge
 - Mobile browsers
 
-## ðŸ“„ License
+## 📄 License
 
 This project is open source. Feel free to use and modify for your own academic website.
 
-## ðŸ¤ Contributing
+## 🤝 Contributing
 
 If you find bugs or have suggestions for improvements:
 1. Fork the repository
@@ -147,7 +147,7 @@ If you find bugs or have suggestions for improvements:
 3. Make your changes
 4. Submit a pull request
 
-## ðŸ“ž Support
+## 📞 Support
 
 For questions or issues with this template, please open an issue in the GitHub repository.
 
@@ -155,7 +155,7 @@ For questions or issues with this template, please open an issue in the GitHub r
 
 **Note**: Remember to update all placeholder content with your actual information before publishing your website.
 
-## ðŸ”— Live Demo
+## 🔗 Live Demo
 
 [View Live Website](https://yourusername.github.io/your-repo-name)
 
