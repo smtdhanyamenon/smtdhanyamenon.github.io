@@ -18,8 +18,8 @@ This website serves as a professional academic portfolio, featuring a clean and 
 ## 🏗️ Structure
 
 ```
-├── index.html          # Main website file
-├── profile.jpg         # Profile picture (add your own)
+├── index.html         # Main website file
+├── profile.jpg        # Profile picture (add your own)
 └── README.md          # This file
 ```
 
@@ -51,7 +51,7 @@ This website serves as a professional academic portfolio, featuring a clean and 
 - Academic contributions
 
 ### Connect (Footer)
-- Social media links (LinkedIn, X, Facebook, Instagram, Blog)
+- Social media links (LinkedIn, GitHub, X, Mastadon, Facebook, Instagram, Snapchat, Blogger)
 - Professional networking integration
 
 ## 🚀 Getting Started
@@ -122,10 +122,13 @@ Uses Georgia serif font for academic readability and professional appearance.
 ### Social Media Links
 Update the footer links with your actual profiles:
 - LinkedIn: Professional networking
+- GitHub:
 - X (Twitter): Academic discourse
+- Mastodon: 
 - Facebook: Professional presence
 - Instagram: Personal/professional content
-- Blog: Academic writing and thoughts
+- Snapchat:
+- Blogger: Academic writing and thoughts
 
 ## 🌐 Browser Support
 
