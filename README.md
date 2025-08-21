@@ -122,13 +122,11 @@ Uses Georgia serif font for academic readability and professional appearance.
 ### Social Media Links
 Update the footer links with your actual profiles:
 - LinkedIn: Professional networking and connections
-- GitHub: Code repositories, projects, and software development work
-- X (Twitter): Academic discourse and thought leadership
-- Mastodon: Decentralised social media and academic community
-- Facebook: Professional and personal presence
+- X (Twitter): Reflections on current events
+- Facebook: Personal milestones and evolving intellectual interests
 - Instagram: Visual content and personal insights
-- Snapchat: Quick updates and academic conversation glimpses
-- Blogger: Academic writing, research insights, and thoughts
+- Blogger: Commentary and research on recent news
+- Mastodon: Engagement with decentralised academic community
 
 ## 🌐 Browser Support
 
