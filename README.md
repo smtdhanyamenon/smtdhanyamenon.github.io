@@ -4,7 +4,7 @@ A modern, responsive professional litterati website showcasing intellectual jour
 
 ## 🎯 Overview
 
-This website serves as a reflective learning portfolio, featuring a clean and sophisticated design optimized for writers, researchers, and think tankers. Built with modern web technologies and designed with academic aesthetics in mind, it emphasises motivations and experiences, over factual listing of personal details.
+This website serves as a reflective learning portfolio, featuring a clean and sophisticated design optimized for writers, researchers, think tankers and academics. Built with modern web technologies and designed with classic aesthetics in mind, it emphasises motivations and experiences, over factual listing of personal details.
 
 ## ✨ Features
 
