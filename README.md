@@ -160,7 +160,7 @@ Update the footer links with your actual profiles:
 
 **Academic & Social:**
 - **X**: `https://x.com/yourhandle` - Thought leadership and academic discourse
-- **Blog**: `https://yourblog.blogspot.com` or your custom domain - Long-form academic writing
+- **Blogger**: `https://yourblog.blogspot.com` or your custom domain - Long-form academic writing
 
 **Personal:**
 - **Facebook**: `https://facebook.com/yourprofile` - Professional and personal presence
