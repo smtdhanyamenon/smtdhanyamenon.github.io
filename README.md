@@ -55,10 +55,11 @@ This website serves as a reflective learning portfolio, featuring a clean and so
 - Social media links across 6 platforms:
   - LinkedIn (Professional networking)
   - GitHub (Code repositories and projects)
-  - X (Academic discourse)
+  - X (Public discourse)
+  - Blog (Intellectual essays)
   - Facebook (Personal presence)
-  - Instagram (Visual content)
-  - Blog (Academic writing)
+  - Instagram (Reading rituals)
+  - Snapchat (Quick updates)
 - Copyright notice
 
 ## 🚀 Getting Started
