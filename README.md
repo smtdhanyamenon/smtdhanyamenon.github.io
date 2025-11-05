@@ -56,7 +56,7 @@ This website serves as a reflective learning portfolio, featuring a clean and so
   - LinkedIn (Professional networking)
   - GitHub (Code repositories and projects)
   - X (Public discourse)
-  - Blog (Intellectual essays)
+  - Blog (Analytical essays)
   - Facebook (Personal presence)
   - Instagram (Reading rituals)
   - Snapchat (Quick updates)
