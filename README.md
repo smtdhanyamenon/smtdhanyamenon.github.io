@@ -57,7 +57,7 @@ This website serves as a reflective learning portfolio, featuring a clean and so
   - GitHub (Code repositories and projects)
   - X (Public discourse)
   - Blog (Analytical essays)
-  - Facebook (Personal presence)
+  - Facebook (Public presence)
   - Instagram (Reading rituals)
   - Snapchat (Quick updates)
 - Copyright notice
