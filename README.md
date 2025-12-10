@@ -51,14 +51,12 @@ This website serves as a reflective learning portfolio, featuring a clean and so
 - Focus on relevance, credibility and discoverability
 - Research as static/dynamic 
 
-### Connect (Footer)
-- Social media links across 6 platforms:
+### Online Presence (Footer)
+- Social media links across 4 platforms:
   - LinkedIn (Professional networking)
   - GitHub (Code repositories and projects)
-  - X (Public discourse)
-  - Facebook (Civic visibility)
-  - Instagram (Scholarly readings)
-  - Blogger (Thought pieces)
+  - Instagram (Book hauls)
+  - Blogger (Informed commentary)
 - Copyright notice
 
 ## 🚀 Getting Started
@@ -209,7 +207,7 @@ Consider adding these sections if relevant to your work:
 - **Teaching**: Courses taught and educational philosophy
 - **CV/Resume**: Downloadable PDF of your curriculum vitae
 - **Projects**: Specific research or data science projects
-- **Blog Integration**: Embed recent blog posts
+- **Blog Integration**: Embed recent guest blog posts
 - **Contact Form**: Allow visitors to reach out directly
 
 ## 📞 Support
