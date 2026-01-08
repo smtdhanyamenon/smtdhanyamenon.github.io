@@ -232,4 +232,4 @@ For questions or issues with this template:
 
 ---
 
-*Built with ❤️ for the lettered community*
+*Built with ❤️ for the academic community*
