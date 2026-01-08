@@ -1,10 +1,10 @@
-# Professional Litterati Website
+# Academic Website
 
-A modern, responsive professional litterati website showcasing intellectual journey, study areas, and research interests in a chosen field.
+A modern, responsive academic website showcasing intellectual journey, scholarly focus, and research interests in a chosen field.
 
 ## 🎯 Overview
 
-This website serves as a reflective learning portfolio, featuring a clean and sophisticated design optimized for writers, researchers, think tankers and academics. Built with modern web technologies and designed with classic aesthetics in mind, it emphasises motivations and experiences, over factual listing of personal details.
+This website serves as a reflective learning portfolio, featuring a clean and sophisticated design optimized for academics, researchers, think tankers, and writers. Built with modern web technologies and designed with classic aesthetics in mind, it emphasises motivations and experiences, over factual listing of personal details.
 
 ## ✨ Features
 
@@ -34,14 +34,14 @@ This website serves as a reflective learning portfolio, featuring a clean and so
 - Smooth scrolling to sections
 - Sticky navigation bar
 - Responsive mobile menu
-- Three main sections: Intellectual Journey, Study Areas, Research Interests
+- Three main sections: Intellectual Journey, Scholarly Focus, Research Interests
 
 ### Intellectual Journey
 - Interdisciplinary/ Multidisciplianary approach 
 - Formation and/or application of knowledge
 - Domains of expertise
 
-### Study Areas
+### Scholarly Focus
 - Comprehensive overview of research fields
 - Subject of philosophical grounding 
 - Emphasis on ethical standards
@@ -52,11 +52,10 @@ This website serves as a reflective learning portfolio, featuring a clean and so
 - Research as static/dynamic 
 
 ### Online Presence (Footer)
-- Social media links across 4 platforms:
-  - LinkedIn (Professional networking)
-  - GitHub (Code repositories and projects)
-  - Instagram (Book hauls)
-  - Blogger (Informed commentary)
+- Social media links across 3 platforms:
+  - LinkedIn (Academic and professional networking)
+  - Instagram (Long-form academic writing)
+  - Blogger (Visual content and insights)
 - Copyright notice
 
 ## 🚀 Getting Started
@@ -127,9 +126,9 @@ You can easily change these values to customize the color scheme while maintaini
 ### Icons
 Font Awesome icons are used throughout:
 - **Intellectual Journey**: Route icon (`fa-route`)
-- **Study Areas**: Book-open icon (`fa-book-open`)
+- **Scholarly Focus**: Book-open icon (`fa-book-open`)
 - **Research Interests**: Lightbulb icon (`fa-lightbulb`)
-- **Social media**: Platform-specific icons
+- **Online Presence**: Platform-specific icons
 
 You can change icons by replacing the Font Awesome class names in the HTML.
 
@@ -152,16 +151,13 @@ This website emphasizes a **reflective and philosophical tone** rather than a tr
 ### Social Media Links
 Update the footer links with your actual profiles:
 
-**Professional Platforms:**
+**Professional:**
 - **LinkedIn**: `https://linkedin.com/in/yourprofile` - Academic and professional networking
-- **GitHub**: `https://github.com/yourusername` - Code repositories, data science projects
 
-**Academic & Social:**
-- **X**: `https://x.com/yourhandle` - Thought leadership and academic discourse
+**Academic:**
 - **Blogger**: `https://yourblog.blogspot.com` or your custom domain - Long-form academic writing
 
 **Personal:**
-- **Facebook**: `https://facebook.com/yourprofile` - Professional and personal presence
 - **Instagram**: `https://instagram.com/yourhandle` - Visual content and insights
 
 ## 🌐 Browser Support
