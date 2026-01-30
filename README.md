@@ -1,6 +1,6 @@
 # Academic Website
 
-A modern, responsive academic website showcasing intellectual journey, scholarly focus, and research interests in a chosen field.
+A modern, responsive academic website showcasing intellectual journey, disciplinary focus, and research interests in a chosen field.
 
 ## 🎯 Overview
 
@@ -34,14 +34,14 @@ This website serves as a reflective learning portfolio, featuring a clean and so
 - Smooth scrolling to sections
 - Sticky navigation bar
 - Responsive mobile menu
-- Three main sections: Intellectual Journey, Scholarly Focus, Research Interests
+- Three main sections: Intellectual Journey, Disciplinary Focus, Research Interests
 
 ### Intellectual Journey
 - Interdisciplinary/ Multidisciplianary approach 
 - Formation and/or application of knowledge
 - Domains of expertise
 
-### Scholarly Focus
+### Disciplinary Focus
 - Comprehensive overview of research fields
 - Subject of philosophical grounding 
 - Emphasis on ethical standards
@@ -54,8 +54,8 @@ This website serves as a reflective learning portfolio, featuring a clean and so
 ### Online Presence (Footer)
 - Social media links across 3 platforms:
   - LinkedIn (Academic and professional networking)
-  - Instagram (Long-form academic writing)
-  - Blogger (Visual content and insights)
+  - Blogger (Short-form academic writing)
+  - Instagram (Visual content and insights)
 - Copyright notice
 
 ## 🚀 Getting Started
@@ -126,7 +126,7 @@ You can easily change these values to customize the color scheme while maintaini
 ### Icons
 Font Awesome icons are used throughout:
 - **Intellectual Journey**: Route icon (`fa-route`)
-- **Scholarly Focus**: Book-open icon (`fa-book-open`)
+- **Disciplinaryy Focus**: Book-open icon (`fa-book-open`)
 - **Research Interests**: Lightbulb icon (`fa-lightbulb`)
 - **Online Presence**: Platform-specific icons
 
@@ -155,7 +155,7 @@ Update the footer links with your actual profiles:
 - **LinkedIn**: `https://linkedin.com/in/yourprofile` - Academic and professional networking
 
 **Academic:**
-- **Blogger**: `https://yourblog.blogspot.com` or your custom domain - Long-form academic writing
+- **Blogger**: `https://yourblog.blogspot.com` or your custom domain - Short-form academic writing
 
 **Personal:**
 - **Instagram**: `https://instagram.com/yourhandle` - Visual content and insights
