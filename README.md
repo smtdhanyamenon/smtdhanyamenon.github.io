@@ -1,6 +1,6 @@
-# Academic Website
+# Personal Website
 
-A modern, responsive academic website showcasing intellectual journey, disciplinary focus, and research interests in a chosen field.
+A modern, responsive academic website showcasing academic journey, disciplinary focus, and research interests in a chosen field.
 
 ## 🎯 Overview
 
@@ -36,7 +36,7 @@ This website serves as a reflective learning portfolio, featuring a clean and so
 - Responsive mobile menu
 - Three main sections: Intellectual Journey, Disciplinary Focus, Research Interests
 
-### Intellectual Journey
+### Academic Journey
 - Interdisciplinary/ Multidisciplianary approach 
 - Formation and/or application of knowledge
 - Domains of expertise
@@ -125,7 +125,7 @@ You can easily change these values to customize the color scheme while maintaini
 
 ### Icons
 Font Awesome icons are used throughout:
-- **Intellectual Journey**: Route icon (`fa-route`)
+- **Academic Journey**: Route icon (`fa-route`)
 - **Disciplinaryy Focus**: Book-open icon (`fa-book-open`)
 - **Research Interests**: Lightbulb icon (`fa-lightbulb`)
 - **Online Presence**: Platform-specific icons
@@ -136,7 +136,7 @@ You can change icons by replacing the Font Awesome class names in the HTML.
 
 ### Writing Style
 This website emphasizes a **reflective and philosophical tone** rather than a traditional factual format:
-- Focus on intellectual journey and scholarly approach
+- Focus on academic journey and scholarly approach
 - Emphasize values, philosophy, and methodology
 - Use thoughtful, contemplative language
 - Avoid bullet points in favor of prose paragraphs
