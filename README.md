@@ -1,6 +1,6 @@
 # Personal Website
 
-A modern, responsive academic website showcasing academic journey, disciplinary focus, and research interests in a chosen field.
+A modern, responsive personal website showcasing academic journey, disciplinary focus, and research interests in a chosen field.
 
 ## 🎯 Overview
 
