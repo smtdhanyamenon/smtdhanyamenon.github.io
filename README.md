@@ -36,7 +36,7 @@ This website serves as a reflective learning portfolio, featuring a clean and so
 - Responsive mobile menu
 - Three main sections: Intellectual Journey, Disciplinary Focus, Research Interests
 
-### Academic Journey
+### Intellectual Journey
 - Interdisciplinary/ Multidisciplianary approach 
 - Formation and/or application of knowledge
 - Domains of expertise
