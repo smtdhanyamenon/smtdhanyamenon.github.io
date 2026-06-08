@@ -1,477 +1,373 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dhanya Menon - Scholar, Professor and Consultant in Data Science, Economics, and Strategic Management</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio — ML × Economics</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0e0e10;
+    --surface: #16161a;
+    --card: #1c1c22;
+    --border: rgba(255,255,255,0.07);
+    --accent: #c8f064;
+    --accent2: #64c8f0;
+    --text: #e8e8e0;
+    --muted: #888880;
+    --tag-bg: rgba(200,240,100,0.08);
+    --tag-color: #b8d858;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 300;
+    line-height: 1.7;
+    font-size: 16px;
+  }
 
-        :root {
-            --primary-color: #1a1a1a;
-            --secondary-color: #2d2d2d;
-            --accent-color: #4a4a4a;
-            --text-primary: #1a1a1a;
-            --text-secondary: #4a4a4a;
-            --bg-light: #f5f5f5;
-            --bg-white: #ffffff;
-            --border-light: #e5e5e5;
-        }
+  /* NAV */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 1.25rem 3rem;
+    background: rgba(14,14,16,0.85);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+  }
+  .nav-logo {
+    font-family: 'DM Mono', monospace;
+    font-size: 13px;
+    color: var(--accent);
+    letter-spacing: 0.05em;
+  }
+  .nav-links { display: flex; gap: 2rem; }
+  .nav-links a {
+    font-size: 13px; color: var(--muted); text-decoration: none;
+    letter-spacing: 0.04em; transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--text); }
 
-        body {
-            font-family: 'Georgia', serif;
-            line-height: 1.6;
-            color: var(--text-primary);
-            background-color: var(--bg-light);
-        }
+  /* HERO */
+  .hero {
+    min-height: 100vh;
+    display: flex; flex-direction: column; justify-content: flex-end;
+    padding: 0 3rem 5rem;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero-bg {
+    position: absolute; inset: 0; z-index: 0;
+    background: radial-gradient(ellipse 60% 50% at 70% 40%, rgba(100,200,240,0.05) 0%, transparent 70%),
+                radial-gradient(ellipse 40% 60% at 20% 60%, rgba(200,240,100,0.04) 0%, transparent 70%);
+  }
+  .hero-grid {
+    position: absolute; inset: 0; z-index: 0; opacity: 0.3;
+    background-image:
+      linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+    background-size: 60px 60px;
+  }
+  .hero-content { position: relative; z-index: 1; max-width: 900px; }
+  .hero-eyebrow {
+    font-family: 'DM Mono', monospace;
+    font-size: 12px; letter-spacing: 0.12em;
+    color: var(--accent); margin-bottom: 1.5rem;
+    opacity: 0; animation: fadeUp 0.8s 0.2s forwards;
+  }
+  .hero-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(3rem, 7vw, 6.5rem);
+    font-weight: 700; line-height: 1.05;
+    letter-spacing: -0.02em;
+    margin-bottom: 1.5rem;
+    opacity: 0; animation: fadeUp 0.8s 0.4s forwards;
+  }
+  .hero-title em { font-style: italic; color: var(--accent2); }
+  .hero-sub {
+    font-size: 18px; color: var(--muted); max-width: 560px;
+    opacity: 0; animation: fadeUp 0.8s 0.6s forwards;
+    font-weight: 300; line-height: 1.8;
+  }
+  .hero-cta {
+    margin-top: 2.5rem;
+    opacity: 0; animation: fadeUp 0.8s 0.8s forwards;
+    display: flex; gap: 1rem; align-items: center;
+  }
+  .btn-primary {
+    display: inline-block; padding: 0.75rem 2rem;
+    background: var(--accent); color: #0e0e10;
+    font-size: 13px; font-weight: 500; letter-spacing: 0.04em;
+    text-decoration: none; border: none; cursor: pointer;
+    transition: opacity 0.2s, transform 0.2s;
+  }
+  .btn-primary:hover { opacity: 0.85; transform: translateY(-1px); }
+  .btn-secondary {
+    display: inline-block; padding: 0.75rem 2rem;
+    border: 1px solid rgba(255,255,255,0.15); color: var(--muted);
+    font-size: 13px; letter-spacing: 0.04em;
+    text-decoration: none; cursor: pointer;
+    transition: border-color 0.2s, color 0.2s;
+  }
+  .btn-secondary:hover { border-color: var(--accent2); color: var(--text); }
 
-        .container {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
+  /* SECTION */
+  section { padding: 6rem 3rem; }
+  .section-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px; letter-spacing: 0.14em; color: var(--accent);
+    text-transform: uppercase; margin-bottom: 0.75rem;
+  }
+  .section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    font-weight: 700; line-height: 1.1;
+    letter-spacing: -0.02em; margin-bottom: 3rem;
+  }
 
-        /* Header */
-        .header {
-            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
-            color: white;
-            padding: 60px 0;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
+  /* ABOUT */
+  .about-inner {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;
+  }
+  .about-text { font-size: 17px; color: var(--muted); line-height: 1.9; }
+  .about-stats {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;
+  }
+  .stat-card {
+    border: 1px solid var(--border); padding: 1.5rem;
+    background: var(--card);
+  }
+  .stat-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem; color: var(--accent); font-weight: 700;
+  }
+  .stat-desc { font-size: 13px; color: var(--muted); margin-top: 0.25rem; }
 
-        .header::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" fill="white" opacity="0.03"><path d="M0,50 C250,25 750,75 1000,50 L1000,100 L0,100 Z"/></svg>') repeat-x;
-        }
+  /* PROJECTS */
+  .filter-row {
+    display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 3rem;
+  }
+  .filter-btn {
+    padding: 0.4rem 1rem; font-size: 12px; letter-spacing: 0.04em;
+    border: 1px solid var(--border); background: transparent; color: var(--muted);
+    cursor: pointer; transition: all 0.2s; font-family: 'DM Mono', monospace;
+  }
+  .filter-btn:hover, .filter-btn.active {
+    border-color: var(--accent); color: var(--accent); background: var(--tag-bg);
+  }
+  .projects-grid {
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    gap: 1px; background: var(--border);
+  }
+  .project-card {
+    background: var(--card); padding: 2rem;
+    transition: background 0.25s;
+    cursor: default; position: relative; overflow: hidden;
+  }
+  .project-card::before {
+    content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
+    background: var(--accent); transform: scaleX(0); transform-origin: left;
+    transition: transform 0.3s ease;
+  }
+  .project-card:hover { background: #212128; }
+  .project-card:hover::before { transform: scaleX(1); }
+  .project-num {
+    font-family: 'DM Mono', monospace; font-size: 11px;
+    color: var(--accent); margin-bottom: 1rem; opacity: 0.6;
+  }
+  .project-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.15rem; font-weight: 700; line-height: 1.3;
+    margin-bottom: 0.75rem; color: var(--text);
+  }
+  .project-desc { font-size: 14px; color: var(--muted); line-height: 1.7; margin-bottom: 1.25rem; }
+  .tech-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+  .tag {
+    font-family: 'DM Mono', monospace; font-size: 10px;
+    padding: 0.25rem 0.6rem; background: var(--tag-bg);
+    color: var(--tag-color); letter-spacing: 0.04em;
+    border: 1px solid rgba(200,240,100,0.12);
+  }
 
-        .header-content {
-            position: relative;
-            z-index: 1;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
+  /* CONTACT */
+  .contact-inner {
+    max-width: 640px;
+  }
+  .contact-text { font-size: 18px; color: var(--muted); line-height: 1.8; margin-bottom: 2.5rem; }
+  .contact-link {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.5rem, 3vw, 2.5rem);
+    font-weight: 400; font-style: italic;
+    color: var(--accent2); text-decoration: none;
+    border-bottom: 1px solid rgba(100,200,240,0.3);
+    transition: border-color 0.2s;
+    display: inline-block;
+  }
+  .contact-link:hover { border-color: var(--accent2); }
 
-        .profile-section {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 2rem;
-        }
+  /* FOOTER */
+  footer {
+    border-top: 1px solid var(--border);
+    padding: 2rem 3rem;
+    display: flex; justify-content: space-between; align-items: center;
+    font-family: 'DM Mono', monospace; font-size: 11px; color: var(--muted);
+  }
 
-        .profile-image {
-            width: 180px;
-            height: 180px;
-            border-radius: 50%;
-            border: 4px solid rgba(255, 255, 255, 0.3);
-            object-fit: cover;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-            transition: all 0.3s ease;
-        }
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
 
-        .profile-image:hover {
-            transform: scale(1.05);
-            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
-        }
-
-        .profile-text {
-            text-align: center;
-        }
-
-        .header h1 {
-            font-size: 3.5rem;
-            font-weight: 300;
-            margin-bottom: 0.5rem;
-            letter-spacing: -1px;
-        }
-
-        .header .title {
-            font-size: 1.4rem;
-            color: #d1d1d1;
-            font-weight: 400;
-            margin-bottom: 2rem;
-        }
-
-        .expertise-tags {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
-            margin-top: 2rem;
-        }
-
-        .social-links {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
-            margin-bottom: 30px;
-        }
-
-        .social-link {
-            background: rgba(255, 255, 255, 0.1);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            padding: 12px 20px;
-            border-radius: 50px;
-            color: white;
-            text-decoration: none;
-            font-size: 1rem;
-            transition: all 0.3s ease;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .social-link:hover {
-            background: rgba(255, 255, 255, 0.2);
-            transform: translateY(-2px);
-            color: white;
-        }
-
-        .social-link i {
-            font-size: 1.2rem;
-        }
-
-        /* Navigation */
-        .nav {
-            background: var(--bg-white);
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-
-        .nav-content {
-            display: flex;
-            justify-content: center;
-            padding: 0;
-        }
-
-        .nav-links {
-            display: flex;
-            list-style: none;
-        }
-
-        .nav-links li a {
-            display: block;
-            padding: 20px 30px;
-            text-decoration: none;
-            color: var(--text-primary);
-            font-weight: 500;
-            transition: all 0.3s ease;
-            border-bottom: 3px solid transparent;
-        }
-
-        .nav-links li a:hover {
-            color: var(--accent-color);
-            border-bottom-color: var(--accent-color);
-        }
-
-        /* Main Content */
-        .main {
-            padding: 60px 0;
-        }
-
-        .section {
-            background: var(--bg-white);
-            margin-bottom: 40px;
-            border-radius: 12px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-            overflow: hidden;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .section:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 30px rgba(0,0,0,0.12);
-        }
-
-        .section-header {
-            background: linear-gradient(135deg, var(--accent-color), var(--secondary-color));
-            color: white;
-            padding: 25px 40px;
-            position: relative;
-        }
-
-        .section-header::after {
-            content: '';
-            position: absolute;
-            bottom: -10px;
-            left: 0;
-            width: 100%;
-            height: 10px;
-            background: linear-gradient(135deg, var(--accent-color), var(--secondary-color));
-            clip-path: polygon(0 0, 100% 0, 95% 100%, 5% 100%);
-        }
-
-        .section-header h2 {
-            font-size: 2rem;
-            font-weight: 400;
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
-
-        .section-content {
-            padding: 40px;
-        }
-
-        /* About Section */
-        .about-text {
-            font-size: 1.15rem;
-            line-height: 1.8;
-            text-align: justify;
-            color: var(--text-secondary);
-        }
-
-        /* Research Sections */
-        .research-item {
-            background: var(--bg-light);
-            border-left: 4px solid var(--accent-color);
-            padding: 25px;
-            margin-bottom: 25px;
-            border-radius: 0 8px 8px 0;
-            transition: all 0.3s ease;
-        }
-
-        /* Footer */
-        .footer {
-            background: var(--primary-color);
-            color: white;
-            text-align: center;
-            padding: 40px 0;
-            margin-top: 60px;
-        }
-
-        .contact-info {
-            display: flex;
-            justify-content: center;
-            gap: 40px;
-            margin-bottom: 20px;
-        }
-
-        .contact-item {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            opacity: 0.9;
-            transition: opacity 0.3s ease;
-        }
-
-        .contact-item:hover {
-            opacity: 1;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .header h1 {
-                font-size: 2.5rem;
-            }
-
-            .nav-links {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .nav-links li a {
-                padding: 15px 20px;
-            }
-
-            .section-content {
-                padding: 25px;
-            }
-
-            .contact-info {
-                flex-direction: column;
-                gap: 15px;
-            }
-
-            .expertise-tags {
-                gap: 8px;
-            }
-
-            .social-link {
-                font-size: 0.9rem;
-                padding: 10px 16px;
-            }
-
-            .expertise-tags {
-                gap: 15px;
-            }
-        }
-
-        /* Animations */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .section {
-            animation: fadeInUp 0.6s ease forwards;
-        }
-
-        .section:nth-child(1) { animation-delay: 0.1s; }
-        .section:nth-child(2) { animation-delay: 0.2s; }
-        .section:nth-child(3) { animation-delay: 0.3s; }
-    </style>
+  @media (max-width: 768px) {
+    nav { padding: 1rem 1.5rem; }
+    .nav-links { display: none; }
+    .hero, section { padding-left: 1.5rem; padding-right: 1.5rem; }
+    .hero { padding-bottom: 3rem; }
+    .about-inner { grid-template-columns: 1fr; gap: 2rem; }
+    .projects-grid { grid-template-columns: 1fr; }
+    footer { flex-direction: column; gap: 0.5rem; text-align: center; }
+  }
+</style>
 </head>
 <body>
-    <header class="header">
-        <div class="container">
-            <div class="header-content">
-                <div class="profile-section">
-                    <img src="profile.jpg" alt="Dhanya Menon" class="profile-image">
-                    <div class="profile-text">
-                        <h1>Dhanya Menon</h1>
-                        <p class="title">Scholar, Professor, and Consultant in Data Science, Economics, and Strategic Management</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
 
-    <nav class="nav">
-        <div class="container">
-            <div class="nav-content">
-                <ul class="nav-links">
-                    <li><a href="#journey">Intellectual Journey</a></li>
-                    <li><a href="#study">Disciplinary Focus</a></li>
-                    <li><a href="#interests">Research Interests</a></li>
-                    <li><a href="#contact">Online Presence</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+<nav>
+  <div class="nav-logo" style="display:flex;align-items:center;gap:0.6rem;">
+    <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAMCAgMCAgMDAwMEAwMEBQgFBQQEBQoHBwYIDAoMDAsKCwsNDhIQDQ4RDgsLEBYQERMUFRUVDA8XGBYUGBIUFRT/2wBDAQMEBAUEBQkFBQkUDQsNFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBT/wAARCAeAB4ADAREAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL" style="width:32px;height:32px;border-radius:50%;object-fit:cover;object-position:center top;border:1.5px solid rgba(200,240,100,0.4);" alt="Dhanya Menon">
+    <span>Dhanya Menon</span>
+  </div>
+  <div class="nav-links">
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
 
-    <main class="main">
-        <div class="container">
-            <section id="journey" class="section">
-                <div class="section-header">
-                    <h2><i class="fas fa-route"></i> Intellectual Journey</h2>
-                </div>
-                <div class="section-content">
-                    <p class="about-text">
-                        As a scholar, professor, and consultant in data science, economics, and strategic management, my intellectual journey has been a lateral pivot. I began immersed in the precision of numerical models and the challenge of pricing assets accurately, but over time I felt the pull toward broader questions—why markets behave the way they do, how risk premiums emerge, and what drives financial systems beyond the math. That curiosity led me to expand my toolkit from pure modeling to economic frameworks and shift my focus from execution to strategy. I learned to see beyond the numbers: to understand how central bank actions ripple through markets, how governance shapes corporate behavior, and how economic cycles influence valuation. From knowing the instruments, the data, and the constraints of systems, I moved toward asking deeper questions—connecting micro‑level precision with macro‑level insight, refining decision‑making under uncertainty, and developing innovative approaches to conceptual ideation that bridge theory and practice.
-                    </p>
-                </div>
-            </section>
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+  <div class="hero-content">
+    <p class="hero-eyebrow">// machine learning · economics · policy</p>
+    <h1 class="hero-title">Where <em>data</em><br>meets<br>economic insight.</h1>
+    <p class="hero-sub">I use machine learning to explore and solve economic challenges — forecasting, causal inference, NLP, and agent-based modeling at the intersection of markets and computation.</p>
+    <div class="hero-cta">
+      <a href="#projects" class="btn-primary">View Projects</a>
+      <a href="#contact" class="btn-secondary">Get in touch</a>
+    </div>
+  </div>
+</section>
 
-            <section id="study" class="section">
-                <div class="section-header">
-                    <h2><i class="fas fa-book-open"></i> Disciplinary Focus</h2>
-                </div>
-                <div class="section-content">
-                    <p class="about-text">
-                        My disciplinary focus has grown out of inquiry about how different parts of the economy speak to one another. I work across central banking, financial regulation, investments and wealth, taxation and public finance, labor and industry, competition and change, climate and development, international business and finance, and even defense and peace. What ties these areas together is my interest in applying machine learning and autonomous systems to illuminate patterns and possibilities. At the heart of this exploration is a question that continues to guide me: how can economic philosophy inform artificial intelligence? For me, this is not just a technical challenge but a way of bridging normative inquiry with computational practice. I see economics and big data as two sides of the same coin—when brought together, they allow us to unite theory with empirical depth, advancing scholarship while shaping practical solutions for policy and industry.
-                    </p>
-                </div>
-            </section>
+<section id="about">
+  <p class="section-label">01 — About</p>
+  <div class="about-inner">
+    <div>
+      <h2 class="section-title">Building models that understand markets.</h2>
+      <p class="about-text">I sit at the intersection of economic theory and modern machine learning. My work spans forecasting macro indicators, estimating causal effects of policy, extracting signals from text, and simulating complex economic systems. I believe rigorous modeling — with interpretability and fairness at its core — can genuinely inform better decisions.</p>
+    </div>
+    <div class="about-stats">
+      <div class="stat-card">
+        <div class="stat-num">25+</div>
+        <div class="stat-desc">ML × economics projects</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">10+</div>
+        <div class="stat-desc">distinct research domains</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">NLP</div>
+        <div class="stat-desc">LLMs · BERT · topic models</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">RL</div>
+        <div class="stat-desc">agents · simulation · policy</div>
+      </div>
+    </div>
+  </div>
+</section>
 
-            <section id="interests" class="section">
-                <div class="section-header">
-                    <h2><i class="fas fa-lightbulb"></i> Research Interests</h2>
-                </div>
-                <div class="section-content">
-                    <p class="about-text">
-                        My research interests arise from the practice of continuous exploration—following global developments, economic indicators and financial markets, examining historical archives, cultural narratives and philosophical essays, engaging with empirical scholarship, and drawing insight from nonfiction literature that challenges how we see the world. I am drawn to the economic and business history of the world, where the rise and fall of resource and military strength reveal the realigning structures of empires and global power, offering lessons in resilience, adaptation, and survival. For me, research is a living process—an ongoing conversation with ideas and events, one that demands credibility, relevance, and discoverability while remaining open to change and reinterpretation. I aim to stay reflective yet forward‑looking, propelled by a drive to question and connect, challenge assumptions, and analyze the evolving dynamics of power, policy, and strategy—attentive to their contingencies and the shifting ground beneath them.
-                    </p>
-                </div>
-            </section>
-        </div>
-    </main>
+<section id="projects">
+  <p class="section-label">02 — Work</p>
+  <h2 class="section-title">Selected projects.</h2>
 
-    <footer id="contact" class="footer">
-        <div class="container">
-            <div class="social-links">
-                <a href="https://www.linkedin.com/in/smtdhanyamenon" class="social-link" target="_blank">
-                    <i class="fab fa-linkedin"></i> LinkedIn
-                </a>
-                <a href="https://mintstreetobserver.blogspot.com" class="social-link" target="_blank">
-                    <i class="fab fa-blogger"></i> Blogger    
-                </a>
-                <a href="https://instagram.com/smtdhanyamenon" class="social-link" target="_blank">
-                    <i class="fab fa-instagram"></i> Instagram
-                </a>
-            </div>
-            <p>&copy; 2026 Dhanya Menon. All rights reserved.</p>
-        </div>
-    </footer>
+  <div class="filter-row">
+    <button class="filter-btn active" onclick="filterProjects('all', this)">All</button>
+    <button class="filter-btn" onclick="filterProjects('forecasting', this)">Forecasting</button>
+    <button class="filter-btn" onclick="filterProjects('causal', this)">Causal ML</button>
+    <button class="filter-btn" onclick="filterProjects('nlp', this)">NLP / LLMs</button>
+    <button class="filter-btn" onclick="filterProjects('finance', this)">Finance</button>
+    <button class="filter-btn" onclick="filterProjects('policy', this)">Policy</button>
+    <button class="filter-btn" onclick="filterProjects('rl', this)">Reinforcement Learning</button>
+  </div>
 
-    <script>
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
+  <div class="projects-grid" id="projectsGrid"></div>
+</section>
 
-        // Add active state to navigation based on scroll position
-        window.addEventListener('scroll', () => {
-            const sections = document.querySelectorAll('section[id]');
-            const navLinks = document.querySelectorAll('.nav-links a');
-            
-            let current = '';
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop - 100;
-                if (scrollY >= sectionTop) {
-                    current = section.getAttribute('id');
-                }
-            });
+<section id="contact">
+  <p class="section-label">03 — Contact</p>
+  <div class="contact-inner">
+    <h2 class="section-title">Let's work together.</h2>
+    <p class="contact-text">Open to collaborations, consulting engagements, and academic inquiries. If you're working on something at the frontier of economics and machine learning, I'd love to hear from you.</p>
+    <a href="mailto:" class="contact-link">Reach out via email ↗</a>
+  </div>
+</section>
 
-            navLinks.forEach(link => {
-                link.classList.remove('active');
-                if (link.getAttribute('href').substring(1) === current) {
-                    link.classList.add('active');
-                }
-            });
-        });
+<footer>
+  <span>Dhanya Menon</span>
+  <span>Scholar, Professor, and Consultant in Data Science, Economics, and Strategic Management</span>
+</footer>
 
-        // Add entrance animations on scroll
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
+<script>
+const projects = [
+  { num: '01', title: 'Economic Indicators Forecasting', desc: 'Hybrid LSTM + XGBoost models to forecast GDP growth, inflation, and unemployment.', tech: ['Python', 'XGBoost', 'LSTM', 'PyTorch', 'FRED API', 'Streamlit'], tags: ['forecasting'] },
+  { num: '02', title: 'Causal Policy Evaluation with Double ML', desc: 'Debiased ML and Causal Forests to estimate the impact of minimum wage increases on employment.', tech: ['EconML', 'DoubleML', 'Causal Forest', 'Python', 'scikit-learn'], tags: ['causal', 'policy'] },
+  { num: '03', title: 'Economic Sentiment Analysis with LLMs', desc: 'NLP pipelines using BERT and LLMs to extract sentiment and uncertainty from central bank speeches, news articles, and earnings calls.', tech: ['Hugging Face', 'Transformers', 'BERT', 'LangChain'], tags: ['nlp'] },
+  { num: '04', title: 'Labor Market Recommender System', desc: 'Job matching model using embeddings to recommend roles based on skills and predict employment probability.', tech: ['Python', 'Sentence-Transformers', 'scikit-learn', 'FAISS', 'Streamlit'], tags: ['forecasting', 'policy'] },
+  { num: '05', title: 'Wage Gap Analysis with Fairness-Aware ML', desc: 'Analyzed gender and racial wage gaps using SHAP interpretability and fairness constraints.', tech: ['Python', 'XGBoost', 'SHAP', 'AIF360', 'ACS data'], tags: ['policy', 'causal'] },
+  { num: '06', title: 'Credit Risk Modeling with Macro Features', desc: 'Probability of default models incorporating macroeconomic variables for better stress testing.', tech: ['Python', 'LightGBM', 'imbalanced-learn', 'survival analysis', 'Streamlit'], tags: ['finance', 'forecasting'] },
+  { num: '07', title: 'Dynamic Pricing Simulator (RL)', desc: 'Reinforcement learning agent for surge pricing in two-sided markets, e.g. ridesharing.', tech: ['Stable Baselines3', 'Gymnasium', 'Python', 'Pandas', 'Matplotlib'], tags: ['rl', 'finance'] },
+  { num: '08', title: 'Trade Shock Impact via Synthetic Controls', desc: 'Extended synthetic control methods with ML to evaluate tariff and trade agreement effects.', tech: ['Python', 'CausalImpact', 'scikit-learn', 'EconML'], tags: ['causal', 'policy'] },
+  { num: '09', title: 'Central Bank Communication Index', desc: 'Real-time monetary policy uncertainty index from FOMC minutes and speeches using topic modeling and LLMs.', tech: ['Hugging Face', 'LDA', 'BERTopic', 'LangChain'], tags: ['nlp', 'finance'] },
+  { num: '10', title: 'Customer Churn & Lifetime Value Prediction', desc: 'Telecom or fintech churn model with economic features — unemployment and inflation as predictors.', tech: ['Python', 'XGBoost', 'Lifelines', 'SHAP', 'Streamlit'], tags: ['finance', 'forecasting'] },
+  { num: '11', title: 'Algorithmic Trading Signals with ML', desc: 'Multi-factor model combining technical, fundamental, and sentiment signals for stock prediction.', tech: ['Python', 'yfinance', 'LightGBM', 'Backtrader', 'TensorFlow'], tags: ['finance'] },
+  { num: '12', title: 'Education Policy Evaluation with Causal ML', desc: 'Estimated returns to online vs in-person education using Double ML on large survey data.', tech: ['DoubleML', 'EconML', 'Python', 'Pandas'], tags: ['causal', 'policy'] },
+  { num: '13', title: 'Generative AI for Economic Scenario Generation', desc: 'Fine-tuned LLM to generate realistic economic shock scenarios for stress testing.', tech: ['Llama 3 / Mistral', 'LoRA fine-tuning', 'Hugging Face'], tags: ['nlp', 'finance'] },
+  { num: '14', title: 'Housing Market Price Prediction & Hedonic Analysis', desc: 'ML-based hedonic pricing model with interpretability for policy insights.', tech: ['XGBoost', 'SHAP', 'Geopandas', 'Streamlit'], tags: ['forecasting', 'policy'] },
+  { num: '15', title: 'Fraud Detection in Financial Transactions', desc: 'Anomaly detection incorporating behavioral and macroeconomic features.', tech: ['Isolation Forest', 'Autoencoders (PyTorch)', 'scikit-learn'], tags: ['finance'] },
+  { num: '16', title: 'Agent-Based Macroeconomic Simulator', desc: 'Agent-based model of consumption and investment with RL agents simulating household and firm behavior.', tech: ['Python', 'Mesa', 'Stable Baselines3'], tags: ['rl'] },
+  { num: '17', title: 'Inflation Expectations from Social Media', desc: 'Extracted household inflation expectations from Twitter/X and Reddit using LLMs.', tech: ['snscrape/Tweepy', 'Hugging Face', 'BERT'], tags: ['nlp', 'forecasting'] },
+  { num: '18', title: 'Optimal Taxation & Policy Design with ML', desc: 'Used machine learning to approximate optimal tax schedules under different social welfare functions.', tech: ['Python', 'PuLP', 'scikit-learn', 'EconML'], tags: ['policy', 'causal'] },
+  { num: '19', title: 'Climate Change Economic Impact Forecasting', desc: 'Predicted regional GDP losses from climate variables using spatiotemporal models.', tech: ['Python', 'PyTorch', 'Geopandas', 'XGBoost'], tags: ['forecasting', 'policy'] },
+  { num: '20', title: 'Product Recommendation with Price Elasticity', desc: 'Demand-aware recommender incorporating price elasticity and cross-price effects for e-commerce.', tech: ['Python', 'Surprise library', 'LightGBM'], tags: ['finance'] },
+  { num: '21', title: 'Unemployment Duration Prediction', desc: 'Survival analysis model to predict unemployment spell length using individual and macro features.', tech: ['Lifelines', 'XGBoost', 'Python'], tags: ['forecasting', 'policy'] },
+  { num: '22', title: 'News-Based Nowcasting of Economic Activity', desc: 'Real-time GDP nowcasting using newspaper text and alternative data sources.', tech: ['BERT', 'Transformers', 'LSTM', 'BeautifulSoup'], tags: ['nlp', 'forecasting'] },
+  { num: '23', title: 'Bias Detection in Algorithmic Hiring Tools', desc: 'Audited resume screening models for demographic bias and proposed debiasing techniques.', tech: ['AIF360', 'SHAP', 'scikit-learn'], tags: ['policy', 'causal'] },
+  { num: '24', title: 'Portfolio Optimization with Regime Switching', desc: 'ML-driven portfolio allocation that detects economic regimes — recession vs expansion.', tech: ['HMM', 'CVXPY', 'scikit-learn'], tags: ['finance', 'forecasting'] },
+  { num: '25', title: 'Automated Economic Research Assistant', desc: 'LLM-powered agent that queries databases, runs regressions, and generates structured research reports.', tech: ['LangChain', 'LlamaIndex', 'FRED API', 'Python'], tags: ['nlp', 'rl'] },
+];
 
-        const observer = new IntersectionObserver(entries => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }
-            });
-        }, observerOptions);
+function renderProjects(list) {
+  const grid = document.getElementById('projectsGrid');
+  grid.innerHTML = list.map(p => `
+    <div class="project-card" data-tags="${p.tags.join(',')}">
+      <div class="project-num">${p.num}</div>
+      <div class="project-title">${p.title}</div>
+      <div class="project-desc">${p.desc}</div>
+      <div class="tech-tags">${p.tech.map(t => `<span class="tag">${t}</span>`).join('')}</div>
+    </div>
+  `).join('');
+}
 
-        document.querySelectorAll('.research-item').forEach(item => {
-            item.style.opacity = '0';
-            item.style.transform = 'translateY(30px)';
-            item.style.transition = 'all 0.6s ease';
-            observer.observe(item);
-        });
-    </script>
+function filterProjects(tag, btn) {
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  const filtered = tag === 'all' ? projects : projects.filter(p => p.tags.includes(tag));
+  renderProjects(filtered);
+}
+
+renderProjects(projects);
+</script>
 </body>
 </html>
